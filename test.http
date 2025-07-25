@@ -1,0 +1,25 @@
+### Test SM3 Hash API
+POST http://localhost:8080/api/sm3/hash
+Content-Type: application/json
+
+{
+    "input": "测试SM3哈希"
+}
+
+### Expected Response:
+// {
+//     "input": "测试SM3哈希",
+//     "sm3Hash": "a6a033e3e6560d5706c0f10d88d8b40083757a4923d9d7997c80e8128286802d"
+// }
+
+### Test SM3 Hash API
+POST http://localhost:8080/api/sm3/hash
+Content-Type: application/json
+
+{
+    # "input": "abc"
+    # "input": "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
+    "input": "测试字节数组输入"
+}
+
+### 实现SM4算法，需要支持CBC与GCM模式
